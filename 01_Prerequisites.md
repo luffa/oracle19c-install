@@ -12,11 +12,12 @@ ifconfig
 ```sh
 nano /etc/hosts
 ```
+![hosts](https://github.com/luffa/oracle19c-install/blob/main/image/Screenshot%202567-02-01%20at%2009.17.24.png)
 
 For example.
 ```sh
 127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
-192.168.56.107  oradbwu.localdomain  oradbwu
+192.168.31.233  oradbwu.localdomain  oradbwu
 ```
 
 ##### 2. Hostname
