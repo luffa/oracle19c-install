@@ -31,11 +31,18 @@ export CV_ASSUME_DISTID=OL8
 ```
 
 ###### install
-```sh
-# Interactive mode.
-./runInstaller
 
-# Silent mode. Includes application of patch.
+การติดตั้งมี 2 แบบ
+
+###### แบบที่ 1
+
+```sh
+./runInstaller
+```
+
+###### แบบที่ 2
+
+```sh
 ./runInstaller -ignorePrereq -waitforcompletion -silent                        \
     -applyRU ${PATCH_PATH1}                                                    \
     -responseFile ${ORACLE_HOME}/install/response/db_install.rsp               \
