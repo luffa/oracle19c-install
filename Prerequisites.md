@@ -120,7 +120,10 @@ systemctl disable firewalld
 ```sh
 mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
 mkdir -p /u02/oradata
+mkdir -p /u01/software
+cp ~/Downloads/LINUX.X64_193000_db_home.zip /u01/software/LINUX.X64_193000_db_home.zip
 chown -R oracle:oinstall /u01 /u02
+chown -R oracle:oinstall /u01/software/LINUX.X64_193000_db_home.zip
 chmod -R 775 /u01 /u02
 ```
 
