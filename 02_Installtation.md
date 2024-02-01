@@ -21,7 +21,6 @@ export SOFTWARE_DIR=/u01/software
 cd $ORACLE_HOME
 unzip -oq ${SOFTWARE_DIR}/LINUX.X64_193000_db_home.zip
 
-export CV_ASSUME_DISTID=OL8
 ```
 
 ###### install
