@@ -183,7 +183,7 @@ chown -R oracle:oinstall /home/oracle/scripts
 chmod u+x /home/oracle/scripts/*.sh
 ```
 
-###### ใช้ start stop database
+###### ใช้ start stop database ต้อง login ด้วย user oracle
 ```sh
 ~/scripts/start_all.sh
 ~/scripts/stop_all.sh
