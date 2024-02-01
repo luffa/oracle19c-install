@@ -13,11 +13,6 @@ DISPLAY=oradbwu:0.0; export DISPLAY
 
 ```sh
 export SOFTWARE_DIR=/u01/software
-export OPATCH_FILE="p6880880_190000_Linux-x86-64.zip"
-export PATCH_FILE="p35742413_190000_Linux-x86-64.zip"
-export PATCH_TOP=${SOFTWARE_DIR}/35742413
-export PATCH_PATH1=${PATCH_TOP}/35643107
-export PATCH_PATH2=${PATCH_TOP}/35648110
 ```
 
 ###### Unzip software.
@@ -25,7 +20,6 @@ export PATCH_PATH2=${PATCH_TOP}/35648110
 ```sh
 cd $ORACLE_HOME
 unzip -oq ${SOFTWARE_DIR}/LINUX.X64_193000_db_home.zip
-unzip -oq ${SOFTWARE_DIR}/${OPATCH_FILE}
 
 export CV_ASSUME_DISTID=OL8
 ```
