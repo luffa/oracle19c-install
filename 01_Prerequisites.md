@@ -6,7 +6,7 @@
 
 ```sh
 sudo -i
-/etc/hosts
+nano /etc/hosts
 ```
 
 For example.
