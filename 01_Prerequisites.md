@@ -143,11 +143,11 @@ export TMP=/tmp
 export TMPDIR=\$TMP
 
 export ORACLE_HOSTNAME=ol9-19.localdomain
-export ORACLE_UNQNAME=cdb1
+export ORACLE_UNQNAME=mydb1
 export ORACLE_BASE=/u01/app/oracle
 export ORACLE_HOME=\$ORACLE_BASE/product/19.0.0/dbhome_1
 export ORA_INVENTORY=/u01/app/oraInventory
-export ORACLE_SID=cdb1
+export ORACLE_SID=mydb1
 export PDB_NAME=pdb1
 export DATA_DIR=/u02/oradata
 
