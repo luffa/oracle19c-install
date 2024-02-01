@@ -6,6 +6,10 @@
 
 ```sh
 sudo -i
+ifconfig
+```
+![ifconfig](https://github.com/luffa/oracle19c-install/blob/main/image/Screenshot%202567-02-01%20at%2009.11.50.png)
+```sh
 nano /etc/hosts
 ```
 
