@@ -80,6 +80,8 @@ dnf install -y nfs-utils
 
 dnf install -y gcc
 dnf install -y unixODBC
+
+xhost +SI:localuser:oracle
 ```
 
 ##### 4. Create the new groups and users.
