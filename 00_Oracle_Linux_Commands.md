@@ -42,3 +42,5 @@
 |tree|	Display the contents of a directory in a tree-like format|
 |readlink	|Display the value of a symbolic link|
 |pushd	|Add a directory to the directory stack and changes the current directory to the new directory|
+
+ที่มา https://linuxsimply.com/cheat-sheets/oracle-linux-commands/
