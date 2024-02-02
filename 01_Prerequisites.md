@@ -39,8 +39,8 @@ oradbwu.localdomain
 ```sh
 dnf install -y oracle-database-preinstall-19c
 dnf update -y
-
-
+```
+```sh
 dnf install -y bc
 dnf install -y binutils
 dnf install -y compat-openssl11
