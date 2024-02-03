@@ -71,4 +71,7 @@ dbca
     
 ![step 17](https://github.com/luffa/oracle19c-install/blob/main/image/createdb/Screenshot%202567-02-03%20at%2007.50.38.png)
  
+16. final
+
+![Final](https://github.com/luffa/oracle19c-install/blob/main/image/createdb/Screenshot%202567-02-03%20at%2008.45.30.png)
 
