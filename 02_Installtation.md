@@ -3,7 +3,7 @@
 ###### Log into the oracle user.
 
 ```sh
-DISPLAY=oradbwu:0.0; export DISPLAY
+DISPLAY=oradbwu:0; export DISPLAY
 ```
 
 ###### เข้าไปใน directory ORACLE_HOME
