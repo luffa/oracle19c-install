@@ -23,7 +23,7 @@ unzip -oq ${SOFTWARE_DIR}/LINUX.X64_193000_db_home.zip
 
 ```
 ```sh
-dnf config-manager --enable ol8_codeready_builder
+dnf config-manager --enable ol9_codeready_builder
 dnf install xorg-x11-apps xorg-x11-xauth
 ```
 
