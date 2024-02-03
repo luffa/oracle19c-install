@@ -23,3 +23,18 @@ nano /etc/oratab
 ```sh
 mydb1:/u01/app/oracle/product/19.0.0/dbhome_1:Y
 ```
+
+# Create Database with GUI
+```sh
+netca
+```
+```sh
+lsnrctl start
+```
+
+```sh
+dbca
+```
+
+
+
