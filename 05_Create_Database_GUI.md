@@ -27,7 +27,7 @@ dbca
 
 ![step5](https://github.com/luffa/oracle19c-install/blob/main/image/createdb/Screenshot%202567-02-03%20at%2007.34.26.png)
 
-6. step 6
+6. step ขั้นตอนนี้ ข้ามไปได้
  
 ![step7](https://github.com/luffa/oracle19c-install/blob/main/image/createdb/Screenshot%202567-02-03%20at%2007.35.01.png)
 
