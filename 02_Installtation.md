@@ -33,7 +33,7 @@ xhost +SI:localuser:oracle
 ```sh
 DISPLAY=oradbwu:0; export DISPLAY
 
-export CV_ASSUME_DISTID=OL8
+export CV_ASSUME_DISTID=OL9
 ```
 
 
