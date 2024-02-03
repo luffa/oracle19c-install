@@ -81,6 +81,9 @@ dnf install -y nfs-utils
 dnf install -y gcc
 dnf install -y unixODBC
 
+dnf config-manager --enable ol9_codeready_builder
+dnf install xorg-x11-apps xorg-x11-xauth
+
 xhost +SI:localuser:oracle
 ```
 
