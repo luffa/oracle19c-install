@@ -23,7 +23,7 @@ CREATE SEQUENCE APPDBA.TABLEAPP_SEQ
   NOORDER;
 ```
 
-### Trig
+### TRIGGER
 
 ```sql
 create or replace
@@ -43,7 +43,31 @@ begin
 end;
 /
 ```
+### Procedure
 
+```sql
+create or replace
+PROCEDURE deletedatatemp(
+id IN VARCHAR2) IS
+idnumber NUMBER;
+tmpname varchar2;
+BEGIN
+
+  idnumber := TO_NUMBER(id);
+
+  -------- UPDATE test 1 ----------------------------------------------
+  SELECT name INTO tmpname
+  FROM tableapp
+  WHERE (id = id);
+
+  UPDATE test2
+  SET name = tmpname || '=' || 'data from test 1'
+  WHERE (id = nmae);
+  ---------------------------------------------------------------------
+
+END;
+/
+```
 
 ### Monitor
 ```sql
