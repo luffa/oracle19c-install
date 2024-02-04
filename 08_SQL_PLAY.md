@@ -60,7 +60,7 @@ BEGIN
   FROM tableapp
   WHERE (id = id);
 
-  UPDATE test2
+  UPDATE test1
   SET name = tmpname || '=' || 'data from test 1'
   WHERE (id = nmae);
   ---------------------------------------------------------------------
@@ -68,6 +68,18 @@ BEGIN
 END;
 /
 ```
+### Function
+```sql
+create or replace function A_TEST_FUNCTION RETURN VARCHAR2 AS 
+aa VARCHAR2(20);
+BEGIN
+ select to_char( max(to_number(id))+1) into aa from tableapp;
+
+  RETURN aa;
+END A_TEST_FUNCTION;
+```
+
+
 
 ### Monitor
 ```sql
