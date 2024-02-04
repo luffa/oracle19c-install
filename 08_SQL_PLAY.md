@@ -9,8 +9,41 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON APPDBA.TABLEAPP		TO MY_RULES;
 CREATE [PUBLIC] SYNONYM synonym_name FOR object_schema.object_name;
 ```
 ```sql
-CREATE [PUBLIC] SYNONYM TABLEAPP FOR APPDBA.TABLEAPP;
+CREATE  SYNONYM TABLEAPP FOR APPDBA.TABLEAPP;
 ```
+### Sequence
+
+```sql
+CREATE SEQUENCE APPDBA.TABLEAPP_SEQ
+  START WITH 1
+  MAXVALUE 999999999999999999999999999
+  MINVALUE 1
+  NOCYCLE
+  CACHE 20
+  NOORDER;
+```
+
+### Trig
+
+```sql
+create or replace
+TRIGGER tableapp_trig
+after insert or update
+of extcode, extusername, extpwd
+on tableapp
+for each row
+begin
+  if inserting then
+   insert into useraccess(userid, username)
+    values(:new.id, :new.name);
+  elsif updating then
+   update useraccess set username = :new.name
+   where userid = :old.id;
+  end if;
+end;
+/
+```
+
 
 ### Monitor
 ```sql
