@@ -59,4 +59,6 @@ ALTER DATABASE DATAFILE '/u01/app/oracle/oradata/mydb1/INDX1.DBF' AUTOEXTEND ON 
 
 
 
+
+
 [ที่มา](https://www.oracle.com/webfolder/technetwork/tutorials/architecture-diagrams/19/database-technical-architecture.html)
