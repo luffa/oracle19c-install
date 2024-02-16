@@ -3,31 +3,36 @@
 ### คำสั่งในการสร้างตาราง 
 
 ```sql
-CREATE TABLE TABLENAME
+CREATE TABLE Table1 (
+colkey NUMBER PRIMARY KEY,
+column1 datatype,
+column2 datatype,
+FOREIGN KEY (column2) REFERENCES Table2(table2key2)
+)
 ```
 
 ```sql
 CREATE TABLE Students (
     StudentID NUMBER PRIMARY KEY,
-    Name VARCHAR2(100),
+    Name VARCHAR2(100 CHAR),
     Age NUMBER,
-    Gender VARCHAR2(10),
+    Gender VARCHAR2(10 CHAR),
     GradeLevel NUMBER,
     GPA NUMBER(3, 2)
 );
 
 CREATE TABLE Teachers (
     TeacherID NUMBER PRIMARY KEY,
-    Name VARCHAR2(100),
+    Name VARCHAR2(100 CHAR),
     Age NUMBER,
-    Gender VARCHAR2(10),
-    Department VARCHAR2(100)
+    Gender VARCHAR2(10 CHAR),
+    Department VARCHAR2(100 CHAR)
 );
 
 CREATE TABLE Courses (
     CourseID NUMBER PRIMARY KEY,
-    CourseName VARCHAR2(100),
-    Description VARCHAR2(4000),
+    CourseName VARCHAR2(100 CHAR),
+    Description VARCHAR2(4000 CHAR),
     TeacherID NUMBER,
     Credits NUMBER,
     FOREIGN KEY (TeacherID) REFERENCES Teachers(TeacherID)
