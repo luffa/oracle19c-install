@@ -218,7 +218,7 @@ INSERT INTO Courses (CourseID, CourseName, Description, TeacherID, Credits) VALU
 INSERT INTO Courses (CourseID, CourseName, Description, TeacherID, Credits) VALUES (99, 'Art 99', 'Description for Art 99 course.', 107, 2);
 INSERT INTO Courses (CourseID, CourseName, Description, TeacherID, Credits) VALUES (100, 'English 100', 'Description for English 100 course.', 110, 3);
 ```
-### TABLE Courses
+### TABLE Enrollments
 ```sql
 INSERT INTO Enrollments (EnrollmentID, StudentID, CourseID, Grade) VALUES (1, 30, 59, 75.97);
 INSERT INTO Enrollments (EnrollmentID, StudentID, CourseID, Grade) VALUES (2, 67, 35, 96.08);
