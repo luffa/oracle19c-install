@@ -39,4 +39,9 @@ join table3 t3 on t1.t1filedid3 = t3.t3field
 | + | Addition (numbers and dates)         | SELECT SAL + 200 FROM EMP; |
 | - | Subtraction (numbers and dates)         | SELECT SAL - 100 FROM EMP; |
 
+### Character Operators
+
+|Operator|Description|Example|
+|-----------|-----------------------------|----------------------|
+| || | Concatenates character strings |  SELECT 'The Name of the employee is: ' || ENAME FROM EMP;|
 
