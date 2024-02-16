@@ -10,7 +10,52 @@ column2 datatype,
 FOREIGN KEY (column2) REFERENCES Table2(table2key2)
 )
 ```
+### ER
+```text
+                +-------------+
+                |   Students  |
+                +-------------+
+                | StudentID   |
+                | Name        |
+                | Age         |
+                | Gender      |
+                | GradeLevel  |
+                | GPA         |
+                +-------------+
+                       |
+                       |
+                +-------------+
+                |  Enrollments|
+                +-------------+
+                | EnrollmentID|
+                | StudentID   |-----+
+                | CourseID    |     |
+                | Grade       |     |
+                +-------------+     |
+                       |            |
+                       |            |
+             +-----------------+    |
+             |     Courses     |    |
+             +-----------------+    |
+             | CourseID        |<---+
+             | CourseName      |
+             | Description     |
+             | TeacherID       |---------+
+             | Credits         |         |
+             +-----------------+         |
+                       |                  |
+                       |                  |
+                +-------------+          |
+                |  Teachers   |          |
+                +-------------+          |
+                | TeacherID   |<---------+
+                | Name        |
+                | Age         |
+                | Gender      |
+                | Department  |
+                +-------------+
 
+```
 ```sql
 CREATE TABLE Students (
     StudentID NUMBER PRIMARY KEY,
@@ -80,3 +125,5 @@ INSERT INTO Enrollments (EnrollmentID, StudentID, CourseID, Grade)
 VALUES (1002, 2, 502, 88.0);
 
 ```
+
+
