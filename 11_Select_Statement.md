@@ -64,3 +64,22 @@ join table3 t3 on t1.t1filedid3 = t3.t3field
 |x [NOT] LIKE y [ESCAPE z]|TRUE if x does [not] match the pattern y. Within y, the character "%" matches any string of zero or more characters except null. The character "_" matches any single character. Any character following ESCAPE is interpreted literally, useful when y contains a percent (%) or underscore (_).|SELECT * FROM EMP WHERE ENAME LIKE '%E%';|
 |IS [NOT] NULL|Tests for nulls. This is the only operator that should be used to test for nulls.|SELECT * FROM EMP WHERE COMM IS NOT NULL AND SAL > 1500;|
 
+
+### Logical Operators
+
+|Operator|Description|Example|
+|-----------|-----------------------------|----------------------|
+|NOT|Returns TRUE if the following condition is FALSE. Returns FALSE if it is TRUE. If it is UNKNOWN, it remains UNKNOWN.|SELECT * FROM EMP WHERE NOT (job IS NULL) ELECT * FROM EMP WHERE NOT (sal BETWEEN 1000 AND 2000)|
+|AND|Returns TRUE if both component conditions are TRUE. Returns FALSE if either is FALSE; otherwise returns UNKNOWN.|SELECT * FROM EMP WHERE job='CLERK' AND deptno=10|
+|OR|Returns TRUE if either component condition is TRUE. Returns FALSE if both are FALSE. Otherwise, returns UNKNOWN.|SELECT * FROM emp WHERE job='CLERK' OR deptno=10|
+
+### Set Operators
+
+|Operator|Description|Example|
+|-----------|-----------------------------|----------------------|
+|UNION|Returns all distinct rows selected by either query.|SELECT * FROM(SELECT ENAME FROM EMP WHERE JOB = 'CLERK' UNION SELECT ENAME FROM EMP WHERE JOB = 'ANALYST');|
+|UNION ALL|Returns all rows selected by either query, including all duplicates.|SELECT * FROM (SELECT SAL FROM EMP WHERE JOB = 'CLERK' UNION SELECT SAL FROM EMP WHERE JOB = 'ANALYST');|
+|INTERSECT and INTERSECT ALL|Returns all distinct rows selected by both queries.|SELECT * FROM orders_list1 INTERSECT SELECT * FROM orders_list2|
+|MINUS|Returns all distinct rows selected by the first query but not the second.|SELECT * FROM (SELECT SAL FROM EMP WHERE JOB = 'PRESIDENT' MINUS SELECT SAL FROM EMP WHERE JOB = 'MANAGER');|
+
+
