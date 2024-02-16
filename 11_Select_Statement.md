@@ -19,3 +19,23 @@ select * from table1 t1
 join table2 t2 on t1.t1fieldid2 = t2.t2field
 join table3 t3 on t1.t1filedid3 = t3.t3field
 ```
+
+
+## SQL Operators
+ - Arithmetic Operators
+ - Character Operators
+ - Comparison Operators
+ - Logical Operators
+ - Set Operators
+
+### Arithmetic Operators
+
+
+|-----------|-----------------------------|----------------------|
+| + (unary) | Makes operand positive      |  SELECT +3 FROM DUAL;|
+| - (unary) | Negates operand             | SELECT -4 FROM DUAL; |
+| / | Division (numbers and dates)| SELECT SAL / 10 FROM EMP; |
+| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
+| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
+| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
+| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
