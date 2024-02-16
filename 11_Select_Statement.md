@@ -30,7 +30,7 @@ join table3 t3 on t1.t1filedid3 = t3.t3field
 
 ### Arithmetic Operators
 
-
+|Operator|Description|Example|
 |-----------|-----------------------------|----------------------|
 | + (unary) | Makes operand positive      |  SELECT +3 FROM DUAL;|
 | - (unary) | Negates operand             | SELECT -4 FROM DUAL; |
