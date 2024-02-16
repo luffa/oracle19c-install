@@ -32,10 +32,11 @@ join table3 t3 on t1.t1filedid3 = t3.t3field
 
 |Operator|Description|Example|
 |-----------|-----------------------------|----------------------|
-| + (unary) | Makes operand positive      |  SELECT +3 FROM DUAL;|
-| - (unary) | Negates operand             | SELECT -4 FROM DUAL; |
+| + (unary) | Makes operand positive |  SELECT +3 FROM DUAL;|
+| - (unary) | Negates operand | SELECT -4 FROM DUAL; |
 | / | Division (numbers and dates)| SELECT SAL / 10 FROM EMP; |
-| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
-| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
-| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
-| - (unary) | Negates operand         | SELECT -4 FROM DUAL; |
+| * | Multiplication         | SSELECT SAL * 5 FROM EMP; |
+| + | Addition (numbers and dates)         | SELECT SAL + 200 FROM EMP; |
+| - | Subtraction (numbers and dates)         | SELECT SAL - 100 FROM EMP; |
+
+
