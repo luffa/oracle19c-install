@@ -4,6 +4,7 @@
 
 ```sql
 select * from table;
+```
 
 ### select with condition
 
