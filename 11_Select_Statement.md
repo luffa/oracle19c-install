@@ -43,5 +43,5 @@ join table3 t3 on t1.t1filedid3 = t3.t3field
 
 |Operator|Description|Example|
 |-----------|-----------------------------|----------------------|
-| || | Concatenates character strings |  SELECT 'The Name of the employee is: ' || ENAME FROM EMP;|
+| \|\| | Concatenates character strings |  SELECT 'The Name of the employee is: ' \|\| ENAME FROM EMP;|
 
