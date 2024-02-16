@@ -11,3 +11,6 @@
 6. [Oracle Architecture](https://github.com/luffa/oracle19c-install/blob/main/06_Oracle_Architecture.md)
 
 7. [User Rule](https://github.com/luffa/oracle19c-install/blob/main/07_Create_User_Rules.md#user--rules)
+8. [SQL PLAY](https://github.com/luffa/oracle19c-install/blob/main/08_SQL_PLAY.md#grant)
+------
+9. [Create Table](https://github.com/luffa/oracle19c-install/blob/main/09_Create_Table.md#create-table)
