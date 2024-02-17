@@ -1,5 +1,7 @@
 # DBA VIEW
 
+### System Resource Views
+
 Provides information about each user in the database.
 ```sql
 select * from DBA_USERS;
