@@ -1,6 +1,7 @@
 # Oracle 19c Install
 
 0. [command](https://github.com/luffa/oracle19c-install/blob/main/00_Oracle_Linux_Commands.md)
+   00. [OracleSqldeveloper](https://drive.google.com/file/d/1uZA0oWSpKmi8-EKZkgLOLA5wO8uM3794/view?usp=drive_link)
 ------
 1. [Prerequisites](https://github.com/luffa/oracle19c-install/blob/main/01_Prerequisites.md)
 2. [Installation](https://github.com/luffa/oracle19c-install/blob/main/02_Installtation.md)
