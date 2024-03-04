@@ -34,6 +34,13 @@ CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_02_STUDMINMAX" ("COURSEI
 ```
 
 3. อาจารย์แต่ละคน สอนกี่วิชา
+
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_03_TCOUNT" ("TEACHERID", "NAME", "COUNTT") AS 
+  select t.teacherid,t.name,tc.countT as countT from teachers t
+  left join (select teacherid, count(teacherid) as countT from courses group by teacherid) tc on t.teacherid = tc.teacherid;
+```
+
 4. วิชาอะไรที่มีการลงทะเบียนเรียนเยอะที่สุด
 5. แสดงคะแนนรายวิชาของนักเรียนแต่ละคน (ระบุรหัส)
 6. นักเรียนแต่ละคนเรียนกับ อาจารย์คนไหนบ้้าง
