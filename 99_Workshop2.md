@@ -9,6 +9,30 @@ CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_01_STUDGPA" ("STUDENTID"
 ```
 
 2. หารายชื่อของนักเรียน ที่ได้คะแนนสูงสุดและตำ่สุดแต่ละวิชา
+
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_STUDMAXGRADE" ("STUDENTID", "STUDENNAME", "COURSEID", "COURSENAME", "GRADE") AS 
+  select  e.STUDENTID, s.name as studenName,ec.courseid,c.coursename,ec.grade from enrollments e
+  join (select courseid, max(grade) as grade from enrollments 
+  group by courseid) ec on e.courseid = ec.courseid and ec.grade =e.grade
+  left join students s on e.studentid = s.studentid
+  left join courses c on e.courseid = c.courseid;
+```
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_STUDMINGRADE" ("STUDENTID", "STUDENNAME", "COURSEID", "COURSENAME", "GRADE") AS 
+  select  e.STUDENTID, s.name as studenName,ec.courseid,c.coursename,ec.grade from enrollments e
+  join (select courseid, min(grade) as grade from enrollments 
+  group by courseid) ec on e.courseid = ec.courseid and ec.grade =e.grade
+  left join students s on e.studentid = s.studentid
+  left join courses c on e.courseid = c.courseid;
+```
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_02_STUDMINMAX" ("COURSEID", "COURSENAME", "STUDENMAXGRADE", "STUDENTMINGRADE") AS 
+  select m.courseid,m.coursename,m.studenname as studenMaxGrade,n.studenname as studentMinGrade
+  from v_studmaxgrade m
+  join v_studmingrade n on n.courseid = m.courseid
+```
+
 3. อาจารย์แต่ละคน สอนกี่วิชา
 4. วิชาอะไรที่มีการลงทะเบียนเรียนเยอะที่สุด
 5. แสดงคะแนนรายวิชาของนักเรียนแต่ละคน (ระบุรหัส)
