@@ -72,3 +72,10 @@ CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_05_STUDEGRADE" ("STUDENT
   where e.studentid = 28;
 ```
 6. นักเรียนแต่ละคนเรียนกับ อาจารย์คนไหนบ้้าง
+```sql
+select s.studentid,s.name as studentname,t.teacherid,t.name as teachername from enrollments e
+left join courses c on e.courseid = c.courseid
+left join teachers t on c.teacherid = t.teacherid
+left join students s on e.studentid = s.studentid
+group by s.studentid,s.name,t.teacherid,t.name
+```
