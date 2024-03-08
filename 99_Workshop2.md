@@ -64,4 +64,11 @@ CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_04_ENROLLMAX" ("COURSEID
 ```
 
 5. แสดงคะแนนรายวิชาของนักเรียนแต่ละคน (ระบุรหัส)
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_05_STUDEGRADE" ("STUDENTID", "STUDENTNAME", "COURSEID", "COURSENAME", "GRADE") AS 
+  select s.studentid,s.name as studentname,e.courseid,c.coursename,e.grade from enrollments e
+  left join courses c on e.courseid = c.courseid
+  left join students s on e.studentid = s.studentid
+  where e.studentid = 28;
+```
 6. นักเรียนแต่ละคนเรียนกับ อาจารย์คนไหนบ้้าง
