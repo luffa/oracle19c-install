@@ -42,5 +42,26 @@ CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_03_TCOUNT" ("TEACHERID",
 ```
 
 4. วิชาอะไรที่มีการลงทะเบียนเรียนเยอะที่สุด
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_ENROLLSTUD" ("RNO", "COURSEID", "COUNTC") AS 
+  SELECT RNO,courseid,countC
+  FROM
+  (
+      SELECT ROW_NUMBER() OVER (ORDER BY count(courseid) desc) AS RNO, courseid,count(courseid) as countC
+      FROM enrollments
+      group by courseid
+  )
+```
+```sql
+CREATE OR REPLACE FORCE NONEDITIONABLE VIEW "APPDBA"."V_04_ENROLLMAX" ("COURSEID", "COURSENAME", "COUNTC") AS 
+  select a.courseid,c.coursename, a.countc
+  from v_enrollstud a
+  left join courses c on a.courseid = c.courseid
+  
+  where a.countc in (
+      select max(countc) from v_enrollstud 
+  );
+```
+
 5. แสดงคะแนนรายวิชาของนักเรียนแต่ละคน (ระบุรหัส)
 6. นักเรียนแต่ละคนเรียนกับ อาจารย์คนไหนบ้้าง
