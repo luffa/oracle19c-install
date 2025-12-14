@@ -33,6 +33,9 @@ expdp [USERNAME]/[PASSWORD]@[SERVICE_NAME] \
     LOGFILE=[LOG_FILE_NAME].log \
     [LEVEL_PARAMETER]=[VALUE]
 ```
+```bash
+expdp appdba/dbapassword@orcl3 full=Y directory=export dumpfile=orcl3-202512-14.dmp logfile=export10g.log
+```
 
 #### ตัวอย่างการใช้งานที่พบบ่อย:
 
@@ -56,6 +59,9 @@ impdp [USERNAME]/[PASSWORD]@[SERVICE_NAME] \
     DUMPFILE=[FILE_NAME].dmp \
     LOGFILE=[LOG_FILE_NAME].log \
     [REMAP_PARAMETER]=[OLD_VALUE]:[NEW_VALUE]
+```
+```bash
+impdp appdba/dbapassword@orcl3 full=Y directory=import dumpfile=orcl3-202512-14.DMP logfile=import.log TABLE_EXISTS_ACTION=replace
 ```
 
 #### ตัวอย่างการใช้งานที่พบบ่อย:
